@@ -1,61 +1,281 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-
-    background-color: #121212;
 
     margin: 0;
 
     display: flex;
+
     justify-content: center;
 
     align-items: flex-start;
 
     min-height: 100vh;
+
+    background: linear-gradient(180deg,#0d0d0d,#1a1a1a);
+
+    text-align: center;
 }
 
 .container {
     width: 100%;
-    max-width: 500px;
+    max-width: 480px;
 
-    margin-top: 50px;
+    margin: 35px 20px;
+
+    background: #1b1b1b;
+
+    padding: 35px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow: 0 25px 60px rgba(0,0,0,.45);
 }
 
-h1 {
-    color: white;
-    font-size: 48px;
-    margin: 0;
+h1{
+    color:#fff;
+    font-size:44px;
+    font-weight:700;
+    margin:10px 0;
+    letter-spacing:1px;
 }
-p {
-    color: #cfcfcf;
-    font-size: 22px;
-    margin: 8px 0 25px;
+p{
+    color:#d4af37;
+
+    font-size:18px;
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    margin:12px 0 35px;
 }
-a {
-    display: inline-block;
-    width: 100%;
-    margin: 15px 0;
-    padding: 12px;
-    background-color: #25D366;
-    color: white;
-    text-decoration: none;
-    /*border-radius: 15px;*/
-    /*border-radius: 8px;*/
-    /*border-radius: 30px;*/
-    /*border-radius: 60px;*/ 
-    border-radius: 100px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.30);
-}
-a:hover {
-    background-color: #1ebe5d;
-    transform: scale(1.05);
+a{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    width:100%;
+
+    padding:16px;
+
+    margin:14px 0;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    border-radius:100px;
+
+    transition:.30s;
+
+    box-sizing:border-box;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.30);
 }
 
-.logo {
-    width: 300px;
-    height: 300px;
+a:hover{
 
-    object-fit: contain;
+    transform:translateY(-3px);
 
-    margin-bottom: -10px;
+    box-shadow:0 15px 30px rgba(0,0,0,.45);
+
+}
+
+.logo{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 20px;
+}
+
+.logo:hover{
+    transform:scale(1.04);
+}
+.whatsapp{
+    background:#25D366;
+}
+
+.whatsapp:hover{
+    background:#1EBE5D;
+}
+
+.telegram{
+    background:#229ED9;
+}
+
+.telegram:hover{
+    background:#1b8abf;
+}
+
+.instagram{
+    background:linear-gradient(45deg,#833AB4,#C13584,#FD1D1D,#FCAF45);
+}
+
+.instagram:hover{
+    filter:brightness(1.08);
+}
+.descricao{
+    display:block;
+
+    color:#bdbdbd;
+
+    font-size:15px;
+
+    line-height:24px;
+
+    margin-bottom:30px;
+}
+
+.oferta-dia{
+    background:#262626;
+    border:2px solid rgba(212,175,55,.35);
+    border-radius:22px;
+    padding:22px;
+    margin-bottom:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.oferta-dia img{
+    width:180px;
+    height:180px;
+    object-fit:contain;
+    background:#fff;
+    border-radius:20px;
+    padding:15px;
+    margin:15px auto;
+    display:block;
+    box-sizing:border-box;
+}
+
+.oferta-dia h2{
+    color:#FFD54A;
+    margin:0 0 20px;
+}
+
+.oferta-dia p{
+
+    color:white;
+
+    letter-spacing:0;
+
+    text-transform:none;
+
+    font-size:18px;
+
+    margin:0;
+
+}
+footer{
+
+    margin-top:40px;
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+.oferta-dia h3{
+    color:#fff;
+    font-size:22px;
+    font-weight:700;
+    line-height:1.3;
+    margin:8px 0;
+}
+
+.preco-antigo{
+    color:#888;
+    text-decoration:line-through;
+    font-size:16px;
+    margin:5px 0 0;
+}
+
+.preco-atual{
+    color:#25D366;
+    font-size:32px;
+    font-weight:700;
+    margin:5px 0 20px;
+}
+
+.botao-oferta{
+    background:#d4af37;
+    color:#111 !important;
+    font-weight:bold;
+    font-size:20px;
+    padding:18px;
+    margin-bottom:0;
+}
+
+.botao-oferta:hover{
+
+    background:#f4d35e;
+
+}
+/* ==========================
+   Lojas
+========================== */
+
+.titulo-lojas{
+    color:#fff;
+    margin:40px 0 20px;
+    font-size:24px;
+}
+
+.loja{
+    margin:10px 0;
+    font-size:18px;
+    font-weight:700;
+    letter-spacing:.3px;
+}
+
+.amazon{
+    background:#232F3E;
+}
+
+.amazon:hover{
+    background:#37475A;
+}
+
+.mercado{
+    background:#FFE600;
+    color:#222 !important;
+}
+
+.mercado:hover{
+    background:#FFD100;
+}
+
+.shopee{
+    background:#EE4D2D;
+}
+
+.shopee:hover{
+    background:#D84322;
+}
+
+.magalu{
+    background:#0086FF;
+}
+
+.magalu:hover{
+    background:#006FE0;
+}
+
+.drogasmil{
+    background:#FF6B00;
+}
+
+.drogasmil:hover{
+    background:#E85F00;
 }
