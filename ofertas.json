@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "nome": "Echo Dot 5ª Geração",
+    "loja": "Amazon",
+    "categoria": "Eletrônicos",
+    "preco": 249.9,
+    "precoAntigo": 399.9,
+    "comissao": null,
+    "imagem": "img/echo-dot.jpg",
+    "link": "https://link.amazon/B08RzF782",
+    "ativo": true
+  },
+  {
+    "id": 2,
+    "nome": "Pasta de Amendoim Dr. Peanut 600g",
+    "loja": "Mercado Livre",
+    "categoria": "Alimentos",
+    "preco": null,
+    "precoAntigo": null,
+    "comissao": null,
+    "imagem": "img/dr-peanut.jpg",
+    "link": "https://meli.la/1L5V4nA",
+    "ativo": true
+  },
+  {
+    "id": 3,
+    "nome": "Oferta Especial Shopee",
+    "loja": "Shopee",
+    "categoria": "Diversos",
+    "preco": null,
+    "precoAntigo": null,
+    "comissao": null,
+    "imagem": "img/shopee.jpg",
+    "link": "https://s.shopee.com.br/LlZq4CWn9",
+    "ativo": true
+  },
+  {
+    "id": 4,
+    "nome": "Fogão Atlas Mônaco Top Glass",
+    "loja": "Magalu",
+    "categoria": "Eletrodomésticos",
+    "preco": null,
+    "precoAntigo": null,
+    "comissao": null,
+    "imagem": "img/magalu.jpg",
+    "link": "https://www.magazinevoce.com.br/magazinemariolucas/fogao-4-bocas-atlas-preto-monaco-top-glass/p/241292200/ed/fg4b/",
+    "ativo": true
+  },
+  {
+    "id": 5,
+    "nome": "Drogasmil",
+    "loja": "Drogasmil",
+    "categoria": "Saúde e Higiene",
+    "preco": null,
+    "precoAntigo": null,
+    "comissao": null,
+    "imagem": "img/drogasmil.jpg",
+    "link": "https://www.drogasmil.com.br/loja?utm_source=mais&utm_medium=maisplataforma&utm_campaign=drogasmilfacil",
+    "ativo": true
+  }
+]
