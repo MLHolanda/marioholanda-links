@@ -1,3 +1,4 @@
+let ofertas = [];
 let indiceAtual = 0;
 
 function registrarClique(indice) {
@@ -62,16 +63,27 @@ function mostrarOferta(indice) {
 
 }
 
-mostrarOferta(indiceAtual);
+fetch("ofertas.json")
+    .then(response => response.json())
+    .then(dados => {
 
-setInterval(() => {
+        ofertas = dados;
 
-    indiceAtual++;
+        mostrarOferta(indiceAtual);
 
-    if (indiceAtual >= ofertas.length) {
-        indiceAtual = 0;
-    }
+        setInterval(() => {
 
-    mostrarOferta(indiceAtual);
+            indiceAtual++;
 
-}, 5000);
+            if (indiceAtual >= ofertas.length) {
+                indiceAtual = 0;
+            }
+
+            mostrarOferta(indiceAtual);
+
+        }, 5000);
+
+    })
+    .catch(erro => {
+        console.error("Erro ao carregar ofertas:", erro);
+    });
