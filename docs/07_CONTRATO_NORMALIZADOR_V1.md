@@ -498,3 +498,46 @@ Os atributos estruturados da Shopee são uma fonte adicional de evidência, mas 
 Quando `global_item_attributes` estiver vazio ou ausente, o classificador deve continuar utilizando as demais fontes disponíveis.
 
 A ausência de atributos não deve, por si só, tornar um produto não classificado.
+## 15.7 Exemplo de evidência contextual
+
+O sistema deve preservar o contexto completo da evidência antes de qualquer classificação.
+
+Exemplo:
+
+```text
+"chaveiro de carros"
+```
+
+A presença da palavra "carros" não é suficiente para classificar o produto como automotivo.
+
+O contexto completo deve ser considerado para evitar falsos positivos.
+
+A identificação de sinais específicos e a decisão da categoria final serão realizadas por etapas posteriores do normalizador.
+
+## 15.8 Condições das regras de classificação
+
+Cada regra de classificação poderá declarar três grupos de evidências:
+
+```text
+inclui
+apoios
+exclui
+```
+
+### inclui
+
+Define os sinais essenciais para que a regra possa ser considerada.
+
+### apoios
+
+Define sinais complementares que aumentam a confiança contextual da regra, mas não substituem os sinais essenciais.
+
+### exclui
+
+Define sinais ou contextos que impedem a aplicação automática da regra.
+
+## 15.9 Regra de interpretação
+
+Uma regra não deve ser aplicada apenas pela presença de uma palavra isolada quando o contexto disponível indicar outro significado.
+
+O comportamento exato de combinação entre sinais, prioridades e conflitos será definido pelo classificador e pelas regras de conflito.
