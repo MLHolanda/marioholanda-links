@@ -426,3 +426,75 @@ A identidade visual, regras específicas de loja e publicação do Mário Holand
 Documento de trabalho — V1.
 
 Este contrato será revisado antes da implementação do código.
+
+---
+
+# 15. Modelo de sinais
+
+## 15.1 Objetivo
+
+O classificador utiliza sinais para interpretar a natureza e o contexto do produto.
+
+Um sinal é uma evidência extraída dos dados do produto. Sinal não representa, por si só, uma classificação final.
+
+## 15.2 Fontes de sinais
+
+Os sinais podem ser extraídos de:
+
+- título (`title`);
+- descrição (`description`);
+- categoria de origem (`global_category1`);
+- subcategoria de origem (`global_category2`);
+- atributos estruturados (`global_item_attributes`).
+
+## 15.3 Estrutura conceitual
+
+Cada sinal deve possuir, no mínimo:
+
+```text
+termo
+origem
+normalizacao
+intensidade
+```
+
+Exemplo conceitual:
+
+```text
+termo: perfume
+origem: title
+normalizacao: perfume
+intensidade: forte
+```
+
+## 15.4 Regra fundamental
+
+Um sinal isolado não determina automaticamente a categoria final.
+
+O classificador deve considerar o conjunto de sinais disponíveis e o contexto em que cada sinal aparece.
+
+## 15.5 Intensidade do sinal
+
+V1 utiliza três níveis conceituais de intensidade:
+
+```text
+forte
+media
+fraca
+```
+
+Definições:
+
+- forte: evidência diretamente relacionada à natureza do produto;
+- media: evidência contextual relevante para a interpretação;
+- fraca: evidência indireta ou pouco específica.
+
+A intensidade descreve a força semântica da evidência. Ela não representa, por si só, uma pontuação numérica.
+
+## 15.6 Ausência de atributos estruturados
+
+Os atributos estruturados da Shopee são uma fonte adicional de evidência, mas não são obrigatórios.
+
+Quando `global_item_attributes` estiver vazio ou ausente, o classificador deve continuar utilizando as demais fontes disponíveis.
+
+A ausência de atributos não deve, por si só, tornar um produto não classificado.
